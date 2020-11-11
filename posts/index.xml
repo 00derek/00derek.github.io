@@ -19,7 +19,7 @@
 Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substring-search zsh-autosuggestions) theme: power10k   iTerm2 iPython/bpython VsCode  Python environment management   Managing virtualenv — virtualenv/virtualenvwrapper or venv manages virtual environments for a specific Python version.
   Managing multiple Python versions With pyenv</description>
             <content type="html"><![CDATA[<p>Making a note to jot down the tools I preferred to use when setting up Python development environment &ndash; <strong>there should be one&ndash; and preferably only one &ndash;obvious way to do things</strong></p>
-<h1 id="terminalreplide">Terminal/REPL/IDE</h1>
+<h2 id="terminalreplide">Terminal/REPL/IDE</h2>
 <ul>
 <li>zsh/oh-my-zsh <a href="https://ohmyz.sh/">https://ohmyz.sh/</a>
 <ul>
@@ -31,7 +31,7 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
 <li>iPython/bpython</li>
 <li>VsCode</li>
 </ul>
-<h1 id="python-environment-management">Python environment management</h1>
+<h2 id="python-environment-management">Python environment management</h2>
 <ul>
 <li>
 <p>Managing virtualenv — virtualenv/virtualenvwrapper or venv manages virtual environments for a specific Python version.</p>
@@ -77,7 +77,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </ol>
 </li>
 </ul>
-<h1 id="dependency-management-tools">Dependency management tools</h1>
+<h2 id="dependency-management-tools">Dependency management tools</h2>
 <ul>
 <li>Preferred: <a href="https://python-poetry.org/">Poetry</a>
 <ul>
@@ -91,7 +91,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </ul>
 </li>
 </ul>
-<h1 id="linting-tools">Linting tools</h1>
+<h2 id="linting-tools">Linting tools</h2>
 <ul>
 <li>Codes are read much longer time than being written</li>
 <li><a href="https://pre-commit.com/">pre-commit</a></li>
