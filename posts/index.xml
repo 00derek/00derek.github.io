@@ -1,23 +1,125 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Just Random Notes</title>
-    <link>https://00derek.github.io/posts/</link>
-    <description>Recent content in Posts on Just Random Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 09 Nov 2020 11:35:41 -0700</lastBuildDate><atom:link href="https://00derek.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My Python Dev Env setup</title>
-      <link>https://00derek.github.io/posts/dev-env-setup/</link>
-      <pubDate>Mon, 09 Nov 2020 11:35:41 -0700</pubDate>
-      
-      <guid>https://00derek.github.io/posts/dev-env-setup/</guid>
-      <description>Making a note to jot down the tools I preferred to use when setting up Python development environment &amp;ndash; there should be one&amp;ndash; and preferably only one &amp;ndash;obvious way to do things
+    <channel>
+        <title>Posts on Just Random Notes</title>
+        <link>https://00derek.github.io/posts/</link>
+        <description>Recent content in Posts on Just Random Notes</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Mon, 09 Nov 2020 11:35:41 -0700</lastBuildDate>
+        <atom:link href="https://00derek.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>My Python Dev Env setup</title>
+            <link>https://00derek.github.io/posts/dev-env-setup/</link>
+            <pubDate>Mon, 09 Nov 2020 11:35:41 -0700</pubDate>
+            
+            <guid>https://00derek.github.io/posts/dev-env-setup/</guid>
+            <description>Making a note to jot down the tools I preferred to use when setting up Python development environment &amp;ndash; there should be one&amp;ndash; and preferably only one &amp;ndash;obvious way to do things
 Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substring-search zsh-autosuggestions) theme: power10k   iTerm2 iPython/bpython VsCode  Python environment management   Managing virtualenv — virtualenv/virtualenvwrapper or venv manages virtual environments for a specific Python version.
   Managing multiple Python versions With pyenv</description>
-    </item>
-    
-  </channel>
+            <content type="html"><![CDATA[<p>Making a note to jot down the tools I preferred to use when setting up Python development environment &ndash; <strong>there should be one&ndash; and preferably only one &ndash;obvious way to do things</strong></p>
+<h1 id="terminalreplide">Terminal/REPL/IDE</h1>
+<ul>
+<li>zsh/oh-my-zsh <a href="https://ohmyz.sh/">https://ohmyz.sh/</a>
+<ul>
+<li>plugins=(git history-substring-search zsh-autosuggestions)</li>
+<li>theme: <a href="https://github.com/romkatv/powerlevel10k">power10k</a></li>
+</ul>
+</li>
+<li>iTerm2</li>
+<li>iPython/bpython</li>
+<li>VsCode</li>
+</ul>
+<h1 id="python-environment-management">Python environment management</h1>
+<ul>
+<li>
+<p>Managing virtualenv — virtualenv/virtualenvwrapper or venv manages virtual environments for a specific Python version.</p>
+</li>
+<li>
+<p>Managing multiple Python versions With pyenv</p>
+<ul>
+<li>
+<p>Installation</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl https://pyenv.run | bash
+or brew install pyenv
+
+export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/.pyenv/bin:</span>$PATH<span style="color:#e6db74">&#34;</span>
+eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>pyenv init -<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>pyenv virtualenv-init -<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div></li>
+</ul>
+<ol>
+<li>
+<p>Install multiple versions of Python</p>
+</li>
+<li>
+<p>Install the latest development version of Python</p>
+</li>
+<li>
+<p>Switch between the installed versions</p>
+</li>
+<li>
+<p>Use virtual environments with <code>pyenv</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pyenv virtualenv &lt;python_version&gt; &lt;environment_name&gt;
+</code></pre></div></li>
+<li>
+<p>Activate different Python versions and virtual environments automatically</p>
+</li>
+<li>
+<p>some useful plugins</p>
+<ul>
+<li><code>pyenv-which-ext</code>: Plugin to automatically lookup system commands</li>
+<li><code>pyenv-virtualenv</code>: Plugin for pyenv and virtual environments</li>
+<li><code>pyenv-update</code>: Plugin for updating pyenv</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="dependency-management-tools">Dependency management tools</h1>
+<ul>
+<li>Preferred: <a href="https://python-poetry.org/">Poetry</a>
+<ul>
+<li>pyproject.toml and poetry.lock</li>
+</ul>
+</li>
+<li>pip install -r requirements.txt</li>
+<li><a href="https://pipenv.pypa.io/en/latest/">Pipenv</a>
+<ul>
+<li>Pipfile and Pipfile.lock</li>
+</ul>
+</li>
+</ul>
+<h1 id="linting-tools">Linting tools</h1>
+<ul>
+<li>Codes are read much longer time than being written</li>
+<li><a href="https://pre-commit.com/">pre-commit</a></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">repos</span><span style="color:#f92672">:</span>
+<span style="color:#f92672">-</span>   <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/pre-commit/pre-commit-hooks
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">v2</span><span style="color:#ae81ff">.3.0</span>
+    <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
+    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">check</span><span style="color:#f92672">-</span><span style="color:#a6e22e">yaml</span>
+    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">end</span><span style="color:#f92672">-</span><span style="color:#66d9ef">of</span><span style="color:#f92672">-</span><span style="color:#a6e22e">file</span><span style="color:#f92672">-</span><span style="color:#a6e22e">fixer</span>
+    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">trailing</span><span style="color:#f92672">-</span><span style="color:#a6e22e">whitespace</span>
+    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">check</span><span style="color:#f92672">-</span><span style="color:#a6e22e">merge</span><span style="color:#f92672">-</span><span style="color:#a6e22e">conflict</span>
+    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">debug</span><span style="color:#f92672">-</span><span style="color:#a6e22e">statements</span>
+<span style="color:#f92672">-</span> <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/miki725/importanize/
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;master&#39;</span>
+    <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
+    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">importanize</span>
+      <span style="color:#a6e22e">args</span><span style="color:#f92672">:</span> [<span style="color:#f92672">--</span><span style="color:#a6e22e">verbose</span>]
+<span style="color:#f92672">-</span>   <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/psf/black
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">19.3</span><span style="color:#a6e22e">b0</span>
+    <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
+    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">black</span>
+<span style="color:#f92672">-</span>   <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//gitlab.com/pycqa/flake8
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">master</span>
+    <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
+    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">flake8</span>
+</code></pre></div>]]></content>
+        </item>
+        
+    </channel>
 </rss>
