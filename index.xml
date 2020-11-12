@@ -29,5 +29,16 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
   Managing multiple Python versions With pyenv</description>
     </item>
     
+    <item>
+      <title>Prologue</title>
+      <link>https://00derek.github.io/posts/prologue/</link>
+      <pubDate>Mon, 09 Nov 2020 08:47:25 -0800</pubDate>
+      
+      <guid>https://00derek.github.io/posts/prologue/</guid>
+      <description>Why Now my notes are all collected through Notion, I highly recommend it. But I think it may be also good to publish my notes somewhere 1. just in case 2. someone may find it helpful 3. Because I want to?
+Who Anyone? Leave me your comments.
+What I guess it will be mainly technical notes for now, I haven&amp;rsquo;t given a lot of thoughts of what to journal yet. So yeah, it&amp;rsquo;s random stuff.</description>
+    </item>
+    
   </channel>
 </rss>

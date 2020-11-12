@@ -121,5 +121,27 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </code></pre></div>]]></content>
         </item>
         
+        <item>
+            <title>Prologue</title>
+            <link>https://00derek.github.io/posts/prologue/</link>
+            <pubDate>Mon, 09 Nov 2020 08:47:25 -0800</pubDate>
+            
+            <guid>https://00derek.github.io/posts/prologue/</guid>
+            <description>Why Now my notes are all collected through Notion, I highly recommend it. But I think it may be also good to publish my notes somewhere 1. just in case 2. someone may find it helpful 3. Because I want to?
+Who Anyone? Leave me your comments.
+What I guess it will be mainly technical notes for now, I haven&amp;rsquo;t given a lot of thoughts of what to journal yet. So yeah, it&amp;rsquo;s random stuff.</description>
+            <content type="html"><![CDATA[<h2 id="why">Why</h2>
+<p>Now my notes are all collected through <a href="http://notion.so/">Notion</a>, I highly recommend it.  But I think it may be also good to publish my notes somewhere 1. just in case 2. someone may find it helpful 3. Because I want to?</p>
+<h2 id="who">Who</h2>
+<p>Anyone? Leave me your comments.</p>
+<h2 id="what">What</h2>
+<p>I guess it will be mainly technical notes for now, I haven&rsquo;t given a lot of thoughts of what to journal yet.  So yeah, it&rsquo;s random stuff.</p>
+<h2 id="where">Where</h2>
+<p>It&rsquo;s hosted on <a href="https://00derek.github.io">Github</a>, <a href="https://github.com/00derek/blog">source</a> too.</p>
+<h2 id="how">How</h2>
+<p>It&rsquo;s powered by <a href="https://gohugo.io">Hugo</a>, a note about the <a href="../hugo_site/">setup</a></p>
+]]></content>
+        </item>
+        
     </channel>
 </rss>
