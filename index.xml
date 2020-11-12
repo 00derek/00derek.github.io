@@ -9,6 +9,16 @@
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 09 Nov 2020 11:35:41 -0700</lastBuildDate><atom:link href="https://00derek.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About</title>
+      <link>https://00derek.github.io/about/</link>
+      <pubDate>Tue, 10 Nov 2020 12:16:00 -0700</pubDate>
+      
+      <guid>https://00derek.github.io/about/</guid>
+      <description>A father, a husband, an athlete, a software engineer, a voracious reader
+Professional experience Lead Software Engineer, Exabeam Inc., CA US, Jan 2019 - Present  Lead various members to implement and improve Data Lake data lifecycle management features, also:  lead python3 migrations introduce data lifecycle management API for enabling Ops team and improved internal health checks improved unit-testing coverage with styling enforcement and automation improved documentation to help onboard new devs   Lead various resource management and stability improvement initiatives  Optimize and balance ingestion and search performance of Elasticsearch Simplified and streamlined deployment Ansible playbooks SaaS offering cost reduction project   Lead initiatives to integrate unified Exabeam data processing pipeline with SaaS Data Lake offering  Tech stack includes: Python, Ansible, mongoDB, Kafka, Elasticsearch, Scala, Akka</description>
+    </item>
+    
+    <item>
       <title>My Python Dev Env setup</title>
       <link>https://00derek.github.io/posts/dev-env-setup/</link>
       <pubDate>Mon, 09 Nov 2020 11:35:41 -0700</pubDate>
