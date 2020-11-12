@@ -290,7 +290,16 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">master</span>
     <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
     <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">flake8</span>
-</code></pre></div>]]></content>
+</code></pre></div><h2 id="other-interesting-tools">Other interesting tools</h2>
+<h3 id="icdiff-and-pytest-icdiff">icdiff and pytest-icdiff</h3>
+<ul>
+<li>icdiff: “Improved colored diff”
+<pre><code>pip install git+https://github.com/jeffkaufman/icdiff.git
+git icdiff
+git config --global icdiff.options '--highlight --line-numbers'
+</code></pre></li>
+</ul>
+]]></content>
         </item>
         
         <item>

@@ -49,7 +49,7 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
   Managing multiple Python versions With pyenv">
 <meta itemprop="datePublished" content="2020-11-09T11:35:41-07:00" />
 <meta itemprop="dateModified" content="2020-11-09T11:35:41-07:00" />
-<meta itemprop="wordCount" content="220">
+<meta itemprop="wordCount" content="241">
 <meta itemprop="image" content="https://00derek.github.io"/>
 
 
@@ -166,6 +166,11 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
     <li><a href="#python-environment-management">Python environment management</a></li>
     <li><a href="#dependency-management-tools">Dependency management tools</a></li>
     <li><a href="#linting-tools">Linting tools</a></li>
+    <li><a href="#other-interesting-tools">Other interesting tools</a>
+      <ul>
+        <li><a href="#icdiff-and-pytest-icdiff">icdiff and pytest-icdiff</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </aside>
@@ -274,7 +279,16 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">master</span>
     <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
     <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">flake8</span>
-</code></pre></div>
+</code></pre></div><h2 id="other-interesting-tools">Other interesting tools</h2>
+<h3 id="icdiff-and-pytest-icdiff">icdiff and pytest-icdiff</h3>
+<ul>
+<li>icdiff: “Improved colored diff”
+<pre><code>pip install git+https://github.com/jeffkaufman/icdiff.git
+git icdiff
+git config --global icdiff.options '--highlight --line-numbers'
+</code></pre></li>
+</ul>
+
       </div>
     </article>
 
@@ -300,7 +314,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        220 Words
+        241 Words
       </p>
 
       <p>
