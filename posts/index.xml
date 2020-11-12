@@ -6,8 +6,180 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 09 Nov 2020 11:35:41 -0700</lastBuildDate>
+        <lastBuildDate>Wed, 11 Nov 2020 20:35:52 -0800</lastBuildDate>
         <atom:link href="https://00derek.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Create blog with GH pages/Hugo</title>
+            <link>https://00derek.github.io/posts/hugo_site/</link>
+            <pubDate>Wed, 11 Nov 2020 20:35:52 -0800</pubDate>
+            
+            <guid>https://00derek.github.io/posts/hugo_site/</guid>
+            <description>Github setup I have a corporate account and wanted to use my personal account for hosting my blog. So essentially it could be using 2 different SSH key and auth with separate keys &amp;ndash; since I have my company auth with OSXKeychain, I just did it for my personal one, and it will be the same for another account if I need it
+  Create SSH keys
+$ cd ~/.</description>
+            <content type="html"><![CDATA[<h2 id="github-setup">Github setup</h2>
+<p>I have a corporate account and wanted to use my personal account for hosting my blog.  So essentially it could be using 2 different SSH key and auth with separate keys &ndash; since I have my company auth with OSXKeychain, I just did it for my personal one, and it will be the same for another account if I need it</p>
+<ul>
+<li>
+<p>Create SSH keys</p>
+<pre><code>$ cd ~/.ssh
+$ ssh-keygen -t rsa -b 4096 -C &quot;your_personal_email@domain.com&quot;
+# getting 2 files
+# id_rsa_personal
+# id_rsa_personal.pub
+</code></pre></li>
+<li>
+<p>Add SSH key to Github account</p>
+<pre><code>$ pbcopy &lt; ~/.ssh/id_rsa_personal.pub
+# On github
+&gt; Settings -&gt; SSH and GPG keys -&gt; New SSH key -&gt; then paste the personal key
+</code></pre></li>
+<li>
+<p>edit <code>.ssh/config</code></p>
+<pre><code># Personal account - default config
+Host github.com-personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_personal
+</code></pre></li>
+<li>
+<p>add SSH keys</p>
+<pre><code># ssh-add -- adds private key identities to the authentication agent
+
+# remove prev. saved identities if needed
+$ cd ~
+$ ssh-add -D
+
+# add
+$ ssh-add id_rsa_personal
+
+# list
+$ ssh-add -l
+</code></pre></li>
+<li>
+<p>talk to Github with ssh</p>
+<pre><code>git clone git@github.com:00derek/blog.git
+</code></pre></li>
+<li>
+<p>config git config for my personal repo (under the directory)
+I kept the global settings for the work, and overwrite local config with my personal ones</p>
+<pre><code>git config user.name &quot;Derek Chang&quot;
+git config user.email &quot;derekchang@live.com&quot;
+</code></pre></li>
+</ul>
+<h2 id="hugo-and-themes">Hugo and themes</h2>
+<p>Basically follow the <a href="https://gohugo.io/getting-started/quick-start/">Hugo quickstart</a></p>
+<ul>
+<li>
+<p>Install Hugo<br>
+<code>brew install hugo</code></p>
+</li>
+<li>
+<p>Create a New Site<br>
+<code>hugo new site SITE_NAME</code></p>
+</li>
+<li>
+<p>Add a Theme &ndash; there are plenty of <a href="https://themes.gohugo.io">themes</a> to choose from</p>
+<pre><code>cd SITE_NAME
+git init
+git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+</code></pre></li>
+<li>
+<p>add posts</p>
+<pre><code>hugo new posts/SOME_POST.md
+hugo new about.md
+</code></pre></li>
+<li>
+<p>run locally with drafts enabled
+<code>hugo server -D</code>, now the site is available at <a href="localhost:1313">localhost:1313</a></p>
+</li>
+<li>
+<p>customize the theme<br>
+change <code>config.toml</code> &ndash; full details of <a href="https://github.com/00derek/blog/blob/master/config.toml">my config</a></p>
+<pre><code>baseurl      = &quot;https://00derek.github.io&quot;
+title        = &quot;My Blog&quot;
+languageCode = &quot;en-us&quot;
+theme        = &quot;hello-friend-ng&quot;
+paginate     = 10
+</code></pre><p><a href="https://gohugo.io/hugo-modules/theme-components/">Detailed How-to</a></p>
+</li>
+<li>
+<p>Build
+<code>hugo -D</code> or <code>hugo -t hello-friend-ng</code></p>
+</li>
+<li>
+<p>Adding utterance for commenting
+It&rsquo;s a lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments.
+<a href="https://utteranc.es">https://utteranc.es</a></p>
+<ul>
+<li>Just need to install at <a href="https://github.com/apps/utterances">https://github.com/apps/utterances</a></li>
+<li>Select the <code>USERNAME</code> repo for access</li>
+<li>Copy the script (based on the configuration) to the template of the theme, e.g.
+<code>layouts/partials/footer.html</code> or <code>layouts/posts/single.html</code>
+There is probably not a right/better way to do it &ndash; <a href="https://gohugobrasil.netlify.app/themes/customizing/">https://gohugobrasil.netlify.app/themes/customizing/</a>
+<pre><code>&lt;script src=&quot;https://utteranc.es/client.js&quot;
+        repo=&quot;[ENTER REPO HERE]&quot;
+        issue-term=&quot;pathname&quot;
+        theme=&quot;github-dark&quot;
+        crossorigin=&quot;anonymous&quot;
+        async&gt;
+&lt;/script&gt;
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h2 id="deploy-hugo-as-a-github-pages-project">Deploy Hugo as a GitHub Pages project</h2>
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></p>
+<h3 id="step-by-step">Step-by-step</h3>
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#step-by-step-instructions">Hugo host on Github Step-by-Step</a> is pretty awesome.  Shamelessly copy/paste here.  Just note that <code>YOUR-PROJECT</code> repo is different from <code>USERNAME</code> repo that going to host github pages are different repos.  I misread that and was wondering why the instructions not working.</p>
+<ul>
+<li>Create a <code>&lt;YOUR-PROJECT&gt;</code> (e.g. blog) repository on GitHub. This repository will contain Hugo’s content and other source files.</li>
+<li>Create a <code>&lt;USERNAME&gt;.github.io</code> GitHub repository. This is the repository that will contain the fully rendered version of your Hugo website.</li>
+<li><code>git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;</code></li>
+<li>Paste your existing Hugo project into the new local <!-- raw HTML omitted --> repository. Make sure your website works locally (hugo server or hugo server -t <!-- raw HTML omitted -->) and open your browser to <a href="http://localhost:1313">http://localhost:1313</a>.
+<ul>
+<li>Once you are happy with the results:</li>
+<li>Press Ctrl+C to kill the server</li>
+</ul>
+</li>
+<li>Before proceeding run rm -rf public to completely remove the <code>public</code> directory</li>
+<li><code>git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public</code>. This creates a git submodule. Now when you run the hugo command to build your site to public, the created <code>public</code> directory will have a different remote origin (i.e. hosted GitHub repository).</li>
+<li>Make sure the baseURL in your config file is updated with: <!-- raw HTML omitted -->.github.io</li>
+</ul>
+<h3 id="create-a-deployment-script">create a deployment script</h3>
+<p>Same, copy the instructions from <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script">Hugo documentation</a></p>
+<ul>
+<li>adding a deploy.sh
+<pre><code>#!/bin/sh
+
+# If a command fails then the deploy stops
+set -e
+
+printf &quot;\033[0;32mDeploying updates to GitHub...\033[0m\n&quot;
+
+# Build the project.
+hugo # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
+
+# Go To Public folder
+cd public
+
+# Add changes to git.
+git add .
+
+# Commit changes.
+msg=&quot;rebuilding site $(date)&quot;
+if [ -n &quot;$*&quot; ]; then
+  msg=&quot;$*&quot;
+fi
+git commit -m &quot;$msg&quot;
+
+# Push source and build repos.
+git push origin master
+</code></pre></li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>My Python Dev Env setup</title>

@@ -5,18 +5,18 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="Making a note to jot down the tools I preferred to use when setting up Python development environment &amp;ndash; there should be one&amp;ndash; and preferably only one &amp;ndash;obvious way to do things
-Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substring-search zsh-autosuggestions) theme: power10k   iTerm2 iPython/bpython VsCode  Python environment management   Managing virtualenv — virtualenv/virtualenvwrapper or venv manages virtual environments for a specific Python version.
-  Managing multiple Python versions With pyenv" />
-<meta name="keywords" content=", Development, Python" />
+<meta name="description" content="Github setup I have a corporate account and wanted to use my personal account for hosting my blog. So essentially it could be using 2 different SSH key and auth with separate keys &amp;ndash; since I have my company auth with OSXKeychain, I just did it for my personal one, and it will be the same for another account if I need it
+  Create SSH keys
+$ cd ~/." />
+<meta name="keywords" content=", notes, Hugo, Github" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
-<link rel="canonical" href="https://00derek.github.io/posts/dev-env-setup/" />
+<link rel="canonical" href="https://00derek.github.io/posts/hugo_site/" />
 
 
     <title>
         
-            My Python Dev Env setup :: Just Random Notes  — A collection of my random notes
+            Create blog with GH pages/Hugo :: Just Random Notes  — A collection of my random notes
         
     </title>
 
@@ -43,45 +43,45 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
 
 
 
-<meta itemprop="name" content="My Python Dev Env setup">
-<meta itemprop="description" content="Making a note to jot down the tools I preferred to use when setting up Python development environment &ndash; there should be one&ndash; and preferably only one &ndash;obvious way to do things
-Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substring-search zsh-autosuggestions) theme: power10k   iTerm2 iPython/bpython VsCode  Python environment management   Managing virtualenv — virtualenv/virtualenvwrapper or venv manages virtual environments for a specific Python version.
-  Managing multiple Python versions With pyenv">
-<meta itemprop="datePublished" content="2020-11-09T11:35:41-07:00" />
-<meta itemprop="dateModified" content="2020-11-09T11:35:41-07:00" />
-<meta itemprop="wordCount" content="220">
+<meta itemprop="name" content="Create blog with GH pages/Hugo">
+<meta itemprop="description" content="Github setup I have a corporate account and wanted to use my personal account for hosting my blog. So essentially it could be using 2 different SSH key and auth with separate keys &ndash; since I have my company auth with OSXKeychain, I just did it for my personal one, and it will be the same for another account if I need it
+  Create SSH keys
+$ cd ~/.">
+<meta itemprop="datePublished" content="2020-11-11T20:35:52-08:00" />
+<meta itemprop="dateModified" content="2020-11-11T20:35:52-08:00" />
+<meta itemprop="wordCount" content="671">
 <meta itemprop="image" content="https://00derek.github.io"/>
 
 
 
-<meta itemprop="keywords" content="Development,Python," />
+<meta itemprop="keywords" content="notes,Hugo,Github," />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://00derek.github.io"/>
 
-<meta name="twitter:title" content="My Python Dev Env setup"/>
-<meta name="twitter:description" content="Making a note to jot down the tools I preferred to use when setting up Python development environment &ndash; there should be one&ndash; and preferably only one &ndash;obvious way to do things
-Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substring-search zsh-autosuggestions) theme: power10k   iTerm2 iPython/bpython VsCode  Python environment management   Managing virtualenv — virtualenv/virtualenvwrapper or venv manages virtual environments for a specific Python version.
-  Managing multiple Python versions With pyenv"/>
+<meta name="twitter:title" content="Create blog with GH pages/Hugo"/>
+<meta name="twitter:description" content="Github setup I have a corporate account and wanted to use my personal account for hosting my blog. So essentially it could be using 2 different SSH key and auth with separate keys &ndash; since I have my company auth with OSXKeychain, I just did it for my personal one, and it will be the same for another account if I need it
+  Create SSH keys
+$ cd ~/."/>
 
 
 
-    <meta property="og:title" content="My Python Dev Env setup" />
-<meta property="og:description" content="Making a note to jot down the tools I preferred to use when setting up Python development environment &ndash; there should be one&ndash; and preferably only one &ndash;obvious way to do things
-Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substring-search zsh-autosuggestions) theme: power10k   iTerm2 iPython/bpython VsCode  Python environment management   Managing virtualenv — virtualenv/virtualenvwrapper or venv manages virtual environments for a specific Python version.
-  Managing multiple Python versions With pyenv" />
+    <meta property="og:title" content="Create blog with GH pages/Hugo" />
+<meta property="og:description" content="Github setup I have a corporate account and wanted to use my personal account for hosting my blog. So essentially it could be using 2 different SSH key and auth with separate keys &ndash; since I have my company auth with OSXKeychain, I just did it for my personal one, and it will be the same for another account if I need it
+  Create SSH keys
+$ cd ~/." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://00derek.github.io/posts/dev-env-setup/" />
+<meta property="og:url" content="https://00derek.github.io/posts/hugo_site/" />
 <meta property="og:image" content="https://00derek.github.io"/>
-<meta property="article:published_time" content="2020-11-09T11:35:41-07:00" />
-<meta property="article:modified_time" content="2020-11-09T11:35:41-07:00" /><meta property="og:site_name" content="Just Random Notes" />
+<meta property="article:published_time" content="2020-11-11T20:35:52-08:00" />
+<meta property="article:modified_time" content="2020-11-11T20:35:52-08:00" /><meta property="og:site_name" content="Just Random Notes" />
 
 
 
 
 
 
-    <meta property="article:published_time" content="2020-11-09 11:35:41 -0700 -0700" />
+    <meta property="article:published_time" content="2020-11-11 20:35:52 -0800 PST" />
 
 
 
@@ -147,7 +147,7 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
-        2 minutes
+        4 minutes
 
         
       </p>
@@ -155,17 +155,21 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
 
     <article>
       <h1 class="post-title">
-        <a href="https://00derek.github.io/posts/dev-env-setup/">My Python Dev Env setup</a>
+        <a href="https://00derek.github.io/posts/hugo_site/">Create blog with GH pages/Hugo</a>
       </h1>
         <hr />
         <aside id="toc">
           <div class="toc-title">Table of Contents</div>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#terminalreplide">Terminal/REPL/IDE</a></li>
-    <li><a href="#python-environment-management">Python environment management</a></li>
-    <li><a href="#dependency-management-tools">Dependency management tools</a></li>
-    <li><a href="#linting-tools">Linting tools</a></li>
+    <li><a href="#github-setup">Github setup</a></li>
+    <li><a href="#hugo-and-themes">Hugo and themes</a></li>
+    <li><a href="#deploy-hugo-as-a-github-pages-project">Deploy Hugo as a GitHub Pages project</a>
+      <ul>
+        <li><a href="#step-by-step">Step-by-step</a></li>
+        <li><a href="#create-a-deployment-script">create a deployment script</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </aside>
@@ -174,107 +178,167 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
       
 
       <div class="post-content">
-        <p>Making a note to jot down the tools I preferred to use when setting up Python development environment &ndash; <strong>there should be one&ndash; and preferably only one &ndash;obvious way to do things</strong></p>
-<h2 id="terminalreplide">Terminal/REPL/IDE</h2>
-<ul>
-<li>zsh/oh-my-zsh <a href="https://ohmyz.sh/">https://ohmyz.sh/</a>
-<ul>
-<li>plugins=(git history-substring-search zsh-autosuggestions)</li>
-<li>theme: <a href="https://github.com/romkatv/powerlevel10k">power10k</a></li>
-</ul>
-</li>
-<li>iTerm2</li>
-<li>iPython/bpython</li>
-<li>VsCode</li>
-</ul>
-<h2 id="python-environment-management">Python environment management</h2>
+        <h2 id="github-setup">Github setup</h2>
+<p>I have a corporate account and wanted to use my personal account for hosting my blog.  So essentially it could be using 2 different SSH key and auth with separate keys &ndash; since I have my company auth with OSXKeychain, I just did it for my personal one, and it will be the same for another account if I need it</p>
 <ul>
 <li>
-<p>Managing virtualenv — virtualenv/virtualenvwrapper or venv manages virtual environments for a specific Python version.</p>
-</li>
+<p>Create SSH keys</p>
+<pre><code>$ cd ~/.ssh
+$ ssh-keygen -t rsa -b 4096 -C &quot;your_personal_email@domain.com&quot;
+# getting 2 files
+# id_rsa_personal
+# id_rsa_personal.pub
+</code></pre></li>
 <li>
-<p>Managing multiple Python versions With pyenv</p>
-<ul>
+<p>Add SSH key to Github account</p>
+<pre><code>$ pbcopy &lt; ~/.ssh/id_rsa_personal.pub
+# On github
+&gt; Settings -&gt; SSH and GPG keys -&gt; New SSH key -&gt; then paste the personal key
+</code></pre></li>
 <li>
-<p>Installation</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl https://pyenv.run | bash
-or brew install pyenv
+<p>edit <code>.ssh/config</code></p>
+<pre><code># Personal account - default config
+Host github.com-personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_personal
+</code></pre></li>
+<li>
+<p>add SSH keys</p>
+<pre><code># ssh-add -- adds private key identities to the authentication agent
 
-export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/.pyenv/bin:</span>$PATH<span style="color:#e6db74">&#34;</span>
-eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>pyenv init -<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>pyenv virtualenv-init -<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-</code></pre></div></li>
+# remove prev. saved identities if needed
+$ cd ~
+$ ssh-add -D
+
+# add
+$ ssh-add id_rsa_personal
+
+# list
+$ ssh-add -l
+</code></pre></li>
+<li>
+<p>talk to Github with ssh</p>
+<pre><code>git clone git@github.com:00derek/blog.git
+</code></pre></li>
+<li>
+<p>config git config for my personal repo (under the directory)
+I kept the global settings for the work, and overwrite local config with my personal ones</p>
+<pre><code>git config user.name &quot;Derek Chang&quot;
+git config user.email &quot;derekchang@live.com&quot;
+</code></pre></li>
 </ul>
-<ol>
-<li>
-<p>Install multiple versions of Python</p>
-</li>
-<li>
-<p>Install the latest development version of Python</p>
-</li>
-<li>
-<p>Switch between the installed versions</p>
-</li>
-<li>
-<p>Use virtual environments with <code>pyenv</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pyenv virtualenv &lt;python_version&gt; &lt;environment_name&gt;
-</code></pre></div></li>
-<li>
-<p>Activate different Python versions and virtual environments automatically</p>
-</li>
-<li>
-<p>some useful plugins</p>
+<h2 id="hugo-and-themes">Hugo and themes</h2>
+<p>Basically follow the <a href="https://gohugo.io/getting-started/quick-start/">Hugo quickstart</a></p>
 <ul>
-<li><code>pyenv-which-ext</code>: Plugin to automatically lookup system commands</li>
-<li><code>pyenv-virtualenv</code>: Plugin for pyenv and virtual environments</li>
-<li><code>pyenv-update</code>: Plugin for updating pyenv</li>
+<li>
+<p>Install Hugo<br>
+<code>brew install hugo</code></p>
+</li>
+<li>
+<p>Create a New Site<br>
+<code>hugo new site SITE_NAME</code></p>
+</li>
+<li>
+<p>Add a Theme &ndash; there are plenty of <a href="https://themes.gohugo.io">themes</a> to choose from</p>
+<pre><code>cd SITE_NAME
+git init
+git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+</code></pre></li>
+<li>
+<p>add posts</p>
+<pre><code>hugo new posts/SOME_POST.md
+hugo new about.md
+</code></pre></li>
+<li>
+<p>run locally with drafts enabled
+<code>hugo server -D</code>, now the site is available at <a href="localhost:1313">localhost:1313</a></p>
+</li>
+<li>
+<p>customize the theme<br>
+change <code>config.toml</code> &ndash; full details of <a href="https://github.com/00derek/blog/blob/master/config.toml">my config</a></p>
+<pre><code>baseurl      = &quot;https://00derek.github.io&quot;
+title        = &quot;My Blog&quot;
+languageCode = &quot;en-us&quot;
+theme        = &quot;hello-friend-ng&quot;
+paginate     = 10
+</code></pre><p><a href="https://gohugo.io/hugo-modules/theme-components/">Detailed How-to</a></p>
+</li>
+<li>
+<p>Build
+<code>hugo -D</code> or <code>hugo -t hello-friend-ng</code></p>
+</li>
+<li>
+<p>Adding utterance for commenting
+It&rsquo;s a lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments.
+<a href="https://utteranc.es">https://utteranc.es</a></p>
+<ul>
+<li>Just need to install at <a href="https://github.com/apps/utterances">https://github.com/apps/utterances</a></li>
+<li>Select the <code>USERNAME</code> repo for access</li>
+<li>Copy the script (based on the configuration) to the template of the theme, e.g.
+<code>layouts/partials/footer.html</code> or <code>layouts/posts/single.html</code>
+There is probably not a right/better way to do it &ndash; <a href="https://gohugobrasil.netlify.app/themes/customizing/">https://gohugobrasil.netlify.app/themes/customizing/</a>
+<pre><code>&lt;script src=&quot;https://utteranc.es/client.js&quot;
+        repo=&quot;[ENTER REPO HERE]&quot;
+        issue-term=&quot;pathname&quot;
+        theme=&quot;github-dark&quot;
+        crossorigin=&quot;anonymous&quot;
+        async&gt;
+&lt;/script&gt;
+</code></pre></li>
 </ul>
 </li>
-</ol>
+</ul>
+<h2 id="deploy-hugo-as-a-github-pages-project">Deploy Hugo as a GitHub Pages project</h2>
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></p>
+<h3 id="step-by-step">Step-by-step</h3>
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#step-by-step-instructions">Hugo host on Github Step-by-Step</a> is pretty awesome.  Shamelessly copy/paste here.  Just note that <code>YOUR-PROJECT</code> repo is different from <code>USERNAME</code> repo that going to host github pages are different repos.  I misread that and was wondering why the instructions not working.</p>
+<ul>
+<li>Create a <code>&lt;YOUR-PROJECT&gt;</code> (e.g. blog) repository on GitHub. This repository will contain Hugo’s content and other source files.</li>
+<li>Create a <code>&lt;USERNAME&gt;.github.io</code> GitHub repository. This is the repository that will contain the fully rendered version of your Hugo website.</li>
+<li><code>git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;</code></li>
+<li>Paste your existing Hugo project into the new local <!-- raw HTML omitted --> repository. Make sure your website works locally (hugo server or hugo server -t <!-- raw HTML omitted -->) and open your browser to <a href="http://localhost:1313">http://localhost:1313</a>.
+<ul>
+<li>Once you are happy with the results:</li>
+<li>Press Ctrl+C to kill the server</li>
+</ul>
 </li>
+<li>Before proceeding run rm -rf public to completely remove the <code>public</code> directory</li>
+<li><code>git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public</code>. This creates a git submodule. Now when you run the hugo command to build your site to public, the created <code>public</code> directory will have a different remote origin (i.e. hosted GitHub repository).</li>
+<li>Make sure the baseURL in your config file is updated with: <!-- raw HTML omitted -->.github.io</li>
 </ul>
-<h2 id="dependency-management-tools">Dependency management tools</h2>
+<h3 id="create-a-deployment-script">create a deployment script</h3>
+<p>Same, copy the instructions from <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script">Hugo documentation</a></p>
 <ul>
-<li>Preferred: <a href="https://python-poetry.org/">Poetry</a>
-<ul>
-<li>pyproject.toml and poetry.lock</li>
+<li>adding a deploy.sh
+<pre><code>#!/bin/sh
+
+# If a command fails then the deploy stops
+set -e
+
+printf &quot;\033[0;32mDeploying updates to GitHub...\033[0m\n&quot;
+
+# Build the project.
+hugo # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
+
+# Go To Public folder
+cd public
+
+# Add changes to git.
+git add .
+
+# Commit changes.
+msg=&quot;rebuilding site $(date)&quot;
+if [ -n &quot;$*&quot; ]; then
+  msg=&quot;$*&quot;
+fi
+git commit -m &quot;$msg&quot;
+
+# Push source and build repos.
+git push origin master
+</code></pre></li>
 </ul>
-</li>
-<li>pip install -r requirements.txt</li>
-<li><a href="https://pipenv.pypa.io/en/latest/">Pipenv</a>
-<ul>
-<li>Pipfile and Pipfile.lock</li>
-</ul>
-</li>
-</ul>
-<h2 id="linting-tools">Linting tools</h2>
-<ul>
-<li>Codes are read much longer time than being written</li>
-<li><a href="https://pre-commit.com/">pre-commit</a></li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">repos</span><span style="color:#f92672">:</span>
-<span style="color:#f92672">-</span>   <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/pre-commit/pre-commit-hooks
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">v2</span><span style="color:#ae81ff">.3.0</span>
-    <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">check</span><span style="color:#f92672">-</span><span style="color:#a6e22e">yaml</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">end</span><span style="color:#f92672">-</span><span style="color:#66d9ef">of</span><span style="color:#f92672">-</span><span style="color:#a6e22e">file</span><span style="color:#f92672">-</span><span style="color:#a6e22e">fixer</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">trailing</span><span style="color:#f92672">-</span><span style="color:#a6e22e">whitespace</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">check</span><span style="color:#f92672">-</span><span style="color:#a6e22e">merge</span><span style="color:#f92672">-</span><span style="color:#a6e22e">conflict</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">debug</span><span style="color:#f92672">-</span><span style="color:#a6e22e">statements</span>
-<span style="color:#f92672">-</span> <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/miki725/importanize/
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;master&#39;</span>
-    <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
-    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">importanize</span>
-      <span style="color:#a6e22e">args</span><span style="color:#f92672">:</span> [<span style="color:#f92672">--</span><span style="color:#a6e22e">verbose</span>]
-<span style="color:#f92672">-</span>   <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/psf/black
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">19.3</span><span style="color:#a6e22e">b0</span>
-    <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">black</span>
-<span style="color:#f92672">-</span>   <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//gitlab.com/pycqa/flake8
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">master</span>
-    <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">flake8</span>
-</code></pre></div>
+
       </div>
     </article>
 
@@ -285,8 +349,9 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
     <p>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
 
-        <span class="tag"><a href="https://00derek.github.io/tags/development/">Development</a></span>
-        <span class="tag"><a href="https://00derek.github.io/tags/python/">Python</a></span>
+        <span class="tag"><a href="https://00derek.github.io/tags/notes/">notes</a></span>
+        <span class="tag"><a href="https://00derek.github.io/tags/hugo/">Hugo</a></span>
+        <span class="tag"><a href="https://00derek.github.io/tags/github/">Github</a></span>
         
     </p>
 
@@ -300,7 +365,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        220 Words
+        671 Words
       </p>
 
       <p>
@@ -311,7 +376,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
           <line x1="3" y1="10" x2="21" y2="10"></line>
         </svg>
         
-          2020-11-09 10:35
+          2020-11-11 20:35
         
 
          
@@ -322,7 +387,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
       <hr />
       <div class="sharing-buttons">
         
-<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2f00derek.github.io%2fposts%2fdev-env-setup%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2f00derek.github.io%2fposts%2fhugo_site%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
   <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
     </div>
@@ -330,7 +395,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2f00derek.github.io%2fposts%2fdev-env-setup%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2f00derek.github.io%2fposts%2fhugo_site%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
   <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
       <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
@@ -339,7 +404,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=My%20Python%20Dev%20Env%20setup&amp;caption=My%20Python%20Dev%20Env%20setup&amp;canonicalUrl=https%3a%2f%2f00derek.github.io%2fposts%2fdev-env-setup%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Create%20blog%20with%20GH%20pages%2fHugo&amp;caption=Create%20blog%20with%20GH%20pages%2fHugo&amp;canonicalUrl=https%3a%2f%2f00derek.github.io%2fposts%2fhugo_site%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
   <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
     <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
@@ -348,7 +413,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </a>
 
 
-<a class="resp-sharing-button__link" href="mailto:?subject=My%20Python%20Dev%20Env%20setup&amp;body=https%3a%2f%2f00derek.github.io%2fposts%2fdev-env-setup%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+<a class="resp-sharing-button__link" href="mailto:?subject=Create%20blog%20with%20GH%20pages%2fHugo&amp;body=https%3a%2f%2f00derek.github.io%2fposts%2fhugo_site%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
   <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
     </div>
@@ -356,7 +421,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2f00derek.github.io%2fposts%2fdev-env-setup%2f&amp;media=https%3a%2f%2f00derek.github.io%2fposts%2fdev-env-setup%2f;description=My%20Python%20Dev%20Env%20setup" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2f00derek.github.io%2fposts%2fhugo_site%2f&amp;media=https%3a%2f%2f00derek.github.io%2fposts%2fhugo_site%2f;description=Create%20blog%20with%20GH%20pages%2fHugo" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
   <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
     </div>
@@ -364,7 +429,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2f00derek.github.io%2fposts%2fdev-env-setup%2f&amp;title=My%20Python%20Dev%20Env%20setup&amp;summary=My%20Python%20Dev%20Env%20setup&amp;source=https%3a%2f%2f00derek.github.io%2fposts%2fdev-env-setup%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2f00derek.github.io%2fposts%2fhugo_site%2f&amp;title=Create%20blog%20with%20GH%20pages%2fHugo&amp;summary=Create%20blog%20with%20GH%20pages%2fHugo&amp;source=https%3a%2f%2f00derek.github.io%2fposts%2fhugo_site%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
   <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
     </div>
@@ -372,7 +437,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2f00derek.github.io%2fposts%2fdev-env-setup%2f&amp;resubmit=true&amp;title=My%20Python%20Dev%20Env%20setup" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2f00derek.github.io%2fposts%2fhugo_site%2f&amp;resubmit=true&amp;title=Create%20blog%20with%20GH%20pages%2fHugo" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
   <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
     </div>
@@ -380,7 +445,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2f00derek.github.io%2fposts%2fdev-env-setup%2f;title=My%20Python%20Dev%20Env%20setup" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2f00derek.github.io%2fposts%2fhugo_site%2f;title=Create%20blog%20with%20GH%20pages%2fHugo" target="_blank" rel="noopener" aria-label="" title="Share on xing">
   <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
     </div>
@@ -388,7 +453,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </a>
 
 
-<a class="resp-sharing-button__link" href="whatsapp://send?text=My%20Python%20Dev%20Env%20setup%20https%3a%2f%2f00derek.github.io%2fposts%2fdev-env-setup%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+<a class="resp-sharing-button__link" href="whatsapp://send?text=Create%20blog%20with%20GH%20pages%2fHugo%20https%3a%2f%2f00derek.github.io%2fposts%2fhugo_site%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
   <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     </div>
@@ -396,7 +461,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2f00derek.github.io%2fposts%2fdev-env-setup%2f&amp;t=My%20Python%20Dev%20Env%20setup" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2f00derek.github.io%2fposts%2fhugo_site%2f&amp;t=Create%20blog%20with%20GH%20pages%2fHugo" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
   <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
     </div>
@@ -404,7 +469,7 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=My%20Python%20Dev%20Env%20setup&amp;url=https%3a%2f%2f00derek.github.io%2fposts%2fdev-env-setup%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Create%20blog%20with%20GH%20pages%2fHugo&amp;url=https%3a%2f%2f00derek.github.io%2fposts%2fhugo_site%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
   <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
     </div>
@@ -422,18 +487,11 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 
         <div class="pagination__buttons">
           
-            <span class="button previous">
-              <a href="https://00derek.github.io/posts/hugo_site/">
-                <span class="button__icon">←</span>
-                <span class="button__text">Create blog with GH pages/Hugo</span>
-              </a>
-            </span>
-          
 
           
             <span class="button next">
-              <a href="https://00derek.github.io/posts/prologue/">
-                <span class="button__text">Prologue</span>
+              <a href="https://00derek.github.io/posts/dev-env-setup/">
+                <span class="button__text">My Python Dev Env setup</span>
                 <span class="button__icon">→</span>
               </a>
             </span>
