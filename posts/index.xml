@@ -6,8 +6,46 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Wed, 11 Nov 2020 20:35:52 -0800</lastBuildDate>
+        <lastBuildDate>Tue, 17 Nov 2020 12:00:16 -0800</lastBuildDate>
         <atom:link href="https://00derek.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Questions I should review myself</title>
+            <link>https://00derek.github.io/posts/questions_collection/</link>
+            <pubDate>Tue, 17 Nov 2020 12:00:16 -0800</pubDate>
+            
+            <guid>https://00derek.github.io/posts/questions_collection/</guid>
+            <description>Various questions and quotes that I collected and for myself to introspect and review later.
+Constantly updating. It&amp;rsquo;s NOT original &amp;ndash; credits to all the original authors, even I don&amp;rsquo;t quote you here (being too lazy).
+What is your true north?  What are you optimizing for? Why?  Examine with Five Whys  I want to ______[What] so that I can _______ [why] by _______[how]  On setting goals  What about this goal sparked my curiosity?</description>
+            <content type="html"><![CDATA[<p>Various questions and quotes that I collected and for myself to introspect and review later.</p>
+<p><strong>Constantly updating.</strong>
+It&rsquo;s NOT original &ndash; credits to all the original authors, even I don&rsquo;t quote you here (being too lazy).</p>
+<h2 id="what-is-your-true-north">What is your true north?</h2>
+<ul>
+<li>What are you optimizing for?</li>
+<li>Why?</li>
+</ul>
+<h2 id="examine-with-five-whys">Examine with Five Whys</h2>
+<ul>
+<li>I want to ______[What] so that I can _______ [why] by _______[how]</li>
+</ul>
+<h2 id="on-setting-goals">On setting goals</h2>
+<ul>
+<li>What about this goal sparked my curiosity?</li>
+<li>What motivated me to want to invest my time and energy here?</li>
+<li>What I am trying to accomplish?</li>
+<li>What will it require?</li>
+<li>What is my definition of success with this goal?</li>
+</ul>
+<h2 id="on-child-development">On child development</h2>
+<ul>
+<li>Has my child developed the skill to develop better skills?</li>
+<li>The knowledge to develop deeper knowledge?</li>
+<li>The experience to learn from his experiences?</li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>Create blog with GH pages/Hugo</title>

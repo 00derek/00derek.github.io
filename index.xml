@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 11 Nov 2020 20:35:52 -0800</lastBuildDate><atom:link href="https://00derek.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Nov 2020 12:00:16 -0800</lastBuildDate><atom:link href="https://00derek.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Questions I should review myself</title>
+      <link>https://00derek.github.io/posts/questions_collection/</link>
+      <pubDate>Tue, 17 Nov 2020 12:00:16 -0800</pubDate>
+      
+      <guid>https://00derek.github.io/posts/questions_collection/</guid>
+      <description>Various questions and quotes that I collected and for myself to introspect and review later.
+Constantly updating. It&amp;rsquo;s NOT original &amp;ndash; credits to all the original authors, even I don&amp;rsquo;t quote you here (being too lazy).
+What is your true north?  What are you optimizing for? Why?  Examine with Five Whys  I want to ______[What] so that I can _______ [why] by _______[how]  On setting goals  What about this goal sparked my curiosity?</description>
+    </item>
+    
     <item>
       <title>Create blog with GH pages/Hugo</title>
       <link>https://00derek.github.io/posts/hugo_site/</link>
