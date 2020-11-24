@@ -47,7 +47,7 @@ Professional experience Lead Software Engineer, Exabeam Inc., CA US, Jan 2019 - 
       
       <guid>https://00derek.github.io/posts/dev-env-setup/</guid>
       <description>Making a note to jot down the tools I preferred to use when setting up Python development environment &amp;ndash; there should be one&amp;ndash; and preferably only one &amp;ndash;obvious way to do things
-Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substring-search zsh-autosuggestions) theme: power10k   iTerm2 iPython/bpython VsCode  Python environment management   Managing virtualenv — virtualenv/virtualenvwrapper or venv manages virtual environments for a specific Python version.
+Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substring-search zsh-autosuggestions) theme: power10k Cheatsheet   iTerm2 iPython/bpython VsCode  Python environment management   Managing virtualenv — virtualenv/virtualenvwrapper or venv manages virtual environments for a specific Python version.
   Managing multiple Python versions With pyenv</description>
     </item>
     
