@@ -6,8 +6,66 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 17 Nov 2020 12:00:16 -0800</lastBuildDate>
+        <lastBuildDate>Sun, 21 Feb 2021 10:47:39 -0800</lastBuildDate>
         <atom:link href="https://00derek.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Starting Pi</title>
+            <link>https://00derek.github.io/posts/pi/</link>
+            <pubDate>Sun, 21 Feb 2021 10:47:39 -0800</pubDate>
+            
+            <guid>https://00derek.github.io/posts/pi/</guid>
+            <description>Tinkering Raspberry Pi Notes Started to play around this little thing and I used to set it up to run a Minecraft server for my son. But now he is moving on to public servers (inevitably) that I am going to take it for experimenting things myself.
+OS For some reason that my pi no longer able to connect to my wifi, after few tries, I decided to reinstall everything.</description>
+            <content type="html"><![CDATA[<h2 id="tinkering-raspberry-pi-notes">Tinkering Raspberry Pi Notes</h2>
+<p>Started to play around this little thing and I used to set it up to run a Minecraft server for my son.  But now he is moving on to public servers (inevitably) that I am going to take it for experimenting things myself.</p>
+<h2 id="os">OS</h2>
+<p>For some reason that my pi no longer able to connect to my wifi, after few tries, I decided to reinstall everything.</p>
+<ul>
+<li><a href="https://www.balena.io/etcher/">Etcher</a> to re-image</li>
+<li>with official image <a href="https://www.raspberrypi.org/documentation/installation/installing-images/">download</a></li>
+<li>install zsh</li>
+</ul>
+<pre><code>sudo apt-get install zsh
+</code></pre><ul>
+<li>set zsh as the default</li>
+</ul>
+<pre><code>chsh -s /bin/zsh
+</code></pre><ul>
+<li>install ohmyzsh</li>
+</ul>
+<pre><code>sh -c &quot;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;
+</code></pre><ul>
+<li><a href="https://github.com/romkatv/powerlevel10k">zsh theme</a></li>
+</ul>
+<h2 id="python-3-installation">Python 3 installation</h2>
+<ul>
+<li>update packages and install needed dependencies</li>
+</ul>
+<pre><code>&gt; sudo apt-get update
+&gt; sudo apt-get screen
+&gt; sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev
+</code></pre><ul>
+<li>download python 3.9.2 and install</li>
+</ul>
+<pre><code>&gt; screen -S py3
+&gt; wget https://www.python.org/ftp/python/3.9.2/Python-3.9.2.tgz
+&gt; tar zxvf Python-3.9.2.tgz
+&gt; cd Python-3.9.2/
+&gt; ./configure --prefix=/usr/local/opt/python-3.9.2 --enable-optimizations
+&gt; make -j4
+&gt; sudo make altinstall
+</code></pre><ul>
+<li>set it to the default</li>
+</ul>
+<pre><code>&gt; sudo update-alternatives --list python
+&gt; sudo update-alternatives --install /usr/bin/python python /usr/local/opt/python-3.9.2/bin/python3.9 1
+</code></pre><h2 id="to-be-continued">To be continued</h2>
+<h3 id="jupyter-notebook">jupyter notebook</h3>
+<h3 id="elk">ELK</h3>
+<h3 id="kafkaksql">Kafka/KSQL</h3>
+]]></content>
+        </item>
         
         <item>
             <title>Questions I should review myself</title>
