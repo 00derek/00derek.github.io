@@ -6,8 +6,160 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sun, 21 Feb 2021 10:47:39 -0800</lastBuildDate>
+        <lastBuildDate>Wed, 24 Mar 2021 22:48:42 -0700</lastBuildDate>
         <atom:link href="https://00derek.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>K3s on RPi notes</title>
+            <link>https://00derek.github.io/posts/k3s/</link>
+            <pubDate>Wed, 24 Mar 2021 22:48:42 -0700</pubDate>
+            
+            <guid>https://00derek.github.io/posts/k3s/</guid>
+            <description>Flash the OS to the SD card  Download Raspbian Lite Flash to SD card using Etcher from Balena Enabling SSH for your Headless Raspberry Pi, touch /boot/ssh  Customization  sudo raspi-config  Set the GPU memory split to 16mb Set the hostname, kubemaster, kube 1 -4 for me Change the password for the pi user   Disable swap  sudo dphys-swapfile swapoff &amp;amp;&amp;amp; \ sudo dphys-swapfile uninstall &amp;amp;&amp;amp; \ sudo systemctl stop dphys-swapfile &amp;amp;&amp;amp; \ sudo systemctl disable dphys-swapfile   Enable container features</description>
+            <content type="html"><![CDATA[<h2 id="flash-the-os-to-the-sd-card">Flash the OS to the SD card</h2>
+<ul>
+<li>Download <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Lite</a></li>
+<li>Flash to SD card using <a href="https://www.balena.io/etcher/">Etcher from Balena</a></li>
+<li>Enabling SSH for your Headless Raspberry Pi, <code>touch /boot/ssh</code></li>
+</ul>
+<h2 id="customization">Customization</h2>
+<ul>
+<li><code>sudo raspi-config</code>
+<ul>
+<li>Set the GPU memory split to 16mb</li>
+<li>Set the hostname, kubemaster, kube 1 -4 for me</li>
+<li>Change the password for the pi user</li>
+</ul>
+</li>
+<li>Disable swap</li>
+</ul>
+<pre><code>sudo dphys-swapfile swapoff &amp;&amp; \
+sudo dphys-swapfile uninstall &amp;&amp; \
+sudo systemctl stop dphys-swapfile &amp;&amp; \
+sudo systemctl disable dphys-swapfile
+</code></pre><ul>
+<li>
+<p>Enable container features</p>
+<ul>
+<li>adding <code>cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory</code> to the end of the line of <code>/boot/cmdline.txt</code></li>
+<li>reboot</li>
+</ul>
+</li>
+<li>
+<p>Set Up Keyless SSH Access Between Hosts</p>
+</li>
+</ul>
+<h2 id="configure-the-network">Configure the Network</h2>
+<ul>
+<li><a href="https://downey.io/blog/create-raspberry-pi-3-router-dhcp-server/">Reference here</a></li>
+<li>set static ip on the home router for the master node</li>
+<li>Wireless and eth0 Static IP on Raspberry PI by editing <code>sudo vi /etc/dhcpcd.conf</code></li>
+</ul>
+<pre><code>interface wlan0
+static ip_address=192.168.1.101/24
+static routers=192.168.1.1
+static domain_name_servers=8.8.8.8
+
+....
+interface eth0
+static ip_address=10.0.0.1/24
+static domain_name_servers=8.8.8.8
+</code></pre><ul>
+<li>a DHCP server for the cluster
+<ul>
+<li>Install dnsmasq</li>
+</ul>
+<pre><code># Install dnsmasq
+sudo apt install dnsmasq
+
+# Move it's default config file for safe-keeping
+sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.old
+</code></pre><ul>
+<li>modify <code>/etc/dnsmasq.conf</code></li>
+</ul>
+<pre><code># Our DHCP service will be providing addresses over our eth0 adapter
+interface=eth0
+
+# We will listen on the static IP address we declared earlier
+listen-address=10.0.0.1
+
+# My cluster doesn't have that many Pis, but since we'll be using this as
+# a jumpbox it is nice to give some wiggle-room.
+# We also declare here that the IP addresses we lease out will be valid for
+# 12 hours
+dhcp-range=10.0.0.32,10.0.0.128,12h
+
+# Decided to assign static IPs to the kube cluster members
+# This would make it easier for tunneling, certs, etc.
+dhcp-host=db:c6:12:f2:7b:16,10.0.0.11
+dhcp-host=db:c6:12:f3:7a:e3,10.0.0.12
+dhcp-host=db:c6:12:f4:7a:c7,10.0.0.13
+dhcp-host=db:c6:12:f5:7a:f2,10.0.0.14
+# This is where you declare any name-servers. We'll just use Google's
+server=8.8.8.8
+# server=8.8.4.4
+
+# Bind dnsmasq to the interfaces it is listening on (eth0)
+bind-interfaces
+
+# Never forward plain names (without a dot or domain part)
+domain-needed
+
+# Never forward addresses in the non-routed address spaces.
+bogus-priv
+
+# Use the hosts file on this machine
+expand-hosts
+
+# Useful for debugging issues
+# log-queries
+# log-dhcp
+</code></pre></li>
+<li>Give clustered Pis static IP addresses, <code>10.0.0.1</code> for the master node, <code>10.0.0.11 - 14</code> for the worker nodes</li>
+</ul>
+<h2 id="create-the-k3s-cluster">Create the k3s cluster</h2>
+<ul>
+<li>On master <code> curl -sfL https://get.k3s.io | sh -</code>
+<ul>
+<li>check the status <code>sudo systemctl status k3s</code></li>
+</ul>
+</li>
+<li>grep the key from the master <code>sudo cat /var/lib/rancher/k3s/server/node-token</code></li>
+<li>Join worker nodes, on each node <code>kube1- kube4</code>
+<ul>
+<li><code>export K3S_URL=&quot;https://10.0.0.1:6443&quot;</code></li>
+<li><code>export K3S_TOKEN=&quot;&quot;</code></li>
+<li>install <code>curl -sfL https://get.k3s.io | sh -</code> (because of the env. variable, the script installs the agent)</li>
+</ul>
+</li>
+<li>List nodes &ndash; <code>kubectl get node -o wide</code></li>
+</ul>
+<pre><code>NAME         STATUS   ROLES                  AGE   VERSION        INTERNAL-IP     EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION   CONTAINER-RUNTIME
+kube3        Ready    &lt;none&gt;                 39m   v1.20.4+k3s1   10.0.0.13       &lt;none&gt;        Raspbian GNU/Linux 10 (buster)   5.4.83-v7l+      containerd://1.4.3-k3s3
+kube4        Ready    &lt;none&gt;                 39m   v1.20.4+k3s1   10.0.0.14       &lt;none&gt;        Raspbian GNU/Linux 10 (buster)   5.4.83-v7l+      containerd://1.4.3-k3s3
+kube1        Ready    &lt;none&gt;                 50m   v1.20.4+k3s1   10.0.0.11       &lt;none&gt;        Raspbian GNU/Linux 10 (buster)   5.4.83-v7l+      containerd://1.4.3-k3s3
+kube2        Ready    &lt;none&gt;                 41m   v1.20.4+k3s1   10.0.0.12       &lt;none&gt;        Raspbian GNU/Linux 10 (buster)   5.4.83-v7l+      containerd://1.4.3-k3s3
+kubemaster   Ready    control-plane,master   52m   v1.20.4+k3s1   192.168.1.101   &lt;none&gt;        Raspbian GNU/Linux 10 (buster)   5.4.83-v7l+      containerd://1.4.3-k3s3
+pi@kube
+</code></pre><h2 id="to-be-continued">To be continued</h2>
+<ul>
+<li>try k3sup?</li>
+<li>try arkade</li>
+<li>Deploy a microservice, OpenFaaS, kafka, ?</li>
+<li>hosted jupyter notebook?</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://downey.io/blog/create-raspberry-pi-3-router-dhcp-server/">https://downey.io/blog/create-raspberry-pi-3-router-dhcp-server/</a></li>
+<li><a href="https://blog.alexellis.io/test-drive-k3s-on-raspberry-pi/">https://blog.alexellis.io/test-drive-k3s-on-raspberry-pi/</a></li>
+<li><a href="https://github.com/alexellis/k3sup">https://github.com/alexellis/k3sup</a></li>
+<li><a href="https://github.com/alexellis/arkade">https://github.com/alexellis/arkade</a></li>
+<li><a href="https://help.dreamhost.com/hc/en-us/articles/216499537-How-to-configure-passwordless-login-in-Mac-OS-X-and-Linux">https://help.dreamhost.com/hc/en-us/articles/216499537-How-to-configure-passwordless-login-in-Mac-OS-X-and-Linux</a></li>
+<li><a href="https://rancher.com/docs/k3s/latest/en/installation/install-options/server-config/">https://rancher.com/docs/k3s/latest/en/installation/install-options/server-config/</a></li>
+<li><a href="https://oliver-hu.medium.com/set-up-a-kafka-cluster-with-raspberry-pi-2859005a9bed">https://oliver-hu.medium.com/set-up-a-kafka-cluster-with-raspberry-pi-2859005a9bed</a></li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>Starting Pi</title>
@@ -60,10 +212,7 @@ OS For some reason that my pi no longer able to connect to my wifi, after few tr
 </ul>
 <pre><code>&gt; sudo update-alternatives --list python
 &gt; sudo update-alternatives --install /usr/bin/python python /usr/local/opt/python-3.9.2/bin/python3.9 1
-</code></pre><h2 id="to-be-continued">To be continued</h2>
-<h3 id="jupyter-notebook">jupyter notebook</h3>
-<h3 id="elk">ELK</h3>
-<h3 id="kafkaksql">Kafka/KSQL</h3>
+</code></pre><h2 id="to-be-continued">To Be Continued</h2>
 ]]></content>
         </item>
         

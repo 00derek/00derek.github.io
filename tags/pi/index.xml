@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 21 Feb 2021 10:47:39 -0800</lastBuildDate><atom:link href="https://00derek.github.io/tags/pi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Mar 2021 22:48:42 -0700</lastBuildDate><atom:link href="https://00derek.github.io/tags/pi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>K3s on RPi notes</title>
+      <link>https://00derek.github.io/posts/k3s/</link>
+      <pubDate>Wed, 24 Mar 2021 22:48:42 -0700</pubDate>
+      
+      <guid>https://00derek.github.io/posts/k3s/</guid>
+      <description>Flash the OS to the SD card  Download Raspbian Lite Flash to SD card using Etcher from Balena Enabling SSH for your Headless Raspberry Pi, touch /boot/ssh  Customization  sudo raspi-config  Set the GPU memory split to 16mb Set the hostname, kubemaster, kube 1 -4 for me Change the password for the pi user   Disable swap  sudo dphys-swapfile swapoff &amp;amp;&amp;amp; \ sudo dphys-swapfile uninstall &amp;amp;&amp;amp; \ sudo systemctl stop dphys-swapfile &amp;amp;&amp;amp; \ sudo systemctl disable dphys-swapfile   Enable container features</description>
+    </item>
+    
     <item>
       <title>Starting Pi</title>
       <link>https://00derek.github.io/posts/pi/</link>
