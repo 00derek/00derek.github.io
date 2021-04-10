@@ -27,7 +27,7 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
 
 
 
-<link rel="stylesheet" href="/main.393856bf2c430bb6c01d7af07c6fe966e7cce8073435cfbbc46e590bab7405ef.css">
+<link rel="stylesheet" href="/main.eaf4f2571fc0260b30532ce37bc0e1c2107885bfec3b592755f30dba7741301e.css">
 
 
 
@@ -46,16 +46,10 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
 <meta itemprop="name" content="My Python Dev Env setup">
 <meta itemprop="description" content="Making a note to jot down the tools I preferred to use when setting up Python development environment &ndash; there should be one&ndash; and preferably only one &ndash;obvious way to do things
 Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substring-search zsh-autosuggestions) theme: power10k Cheatsheet   iTerm2 iPython/bpython VsCode  Python environment management   Managing virtualenv — virtualenv/virtualenvwrapper or venv manages virtual environments for a specific Python version.
-  Managing multiple Python versions With pyenv">
-<meta itemprop="datePublished" content="2020-11-09T11:35:41-07:00" />
+  Managing multiple Python versions With pyenv"><meta itemprop="datePublished" content="2020-11-09T11:35:41-07:00" />
 <meta itemprop="dateModified" content="2020-11-09T11:35:41-07:00" />
-<meta itemprop="wordCount" content="242">
-<meta itemprop="image" content="https://00derek.github.io"/>
-
-
-
+<meta itemprop="wordCount" content="260"><meta itemprop="image" content="https://00derek.github.io"/>
 <meta itemprop="keywords" content="notes,python," />
-
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://00derek.github.io"/>
 
@@ -66,15 +60,16 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
 
 
 
+
     <meta property="og:title" content="My Python Dev Env setup" />
 <meta property="og:description" content="Making a note to jot down the tools I preferred to use when setting up Python development environment &ndash; there should be one&ndash; and preferably only one &ndash;obvious way to do things
 Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substring-search zsh-autosuggestions) theme: power10k Cheatsheet   iTerm2 iPython/bpython VsCode  Python environment management   Managing virtualenv — virtualenv/virtualenvwrapper or venv manages virtual environments for a specific Python version.
   Managing multiple Python versions With pyenv" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://00derek.github.io/posts/dev-env-setup/" />
-<meta property="og:image" content="https://00derek.github.io"/>
+<meta property="og:url" content="https://00derek.github.io/posts/dev-env-setup/" /><meta property="og:image" content="https://00derek.github.io"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-11-09T11:35:41-07:00" />
 <meta property="article:modified_time" content="2020-11-09T11:35:41-07:00" /><meta property="og:site_name" content="Just Random Notes" />
+
 
 
 
@@ -92,7 +87,10 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
 
     </head>
 
-    <body class="dark-theme">
+    
+        <body>
+    
+    
         <div class="container">
             <header class="header">
     <span class="header__inner">
@@ -114,7 +112,7 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://00derek.github.io/about/">About</a></li><li><a href="https://00derek.github.io/posts/">Posts</a></li><li><a href="https://00derek.github.io/tags/">Tags</a></li>
+    <ul class="menu__inner"><li><a href="/about/">About</a></li><li><a href="/posts/">Posts</a></li><li><a href="/tags/">Tags</a></li>
     </ul>
 </nav>
 
@@ -125,13 +123,6 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
                     </svg>
                 </span>
             
-
-            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
-  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
-  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
-</svg>
-</span>
         </span>
     </span>
 </header>
@@ -157,6 +148,10 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
       <h1 class="post-title">
         <a href="https://00derek.github.io/posts/dev-env-setup/">My Python Dev Env setup</a>
       </h1>
+
+      
+
+      
         <hr />
         <aside id="toc">
           <div class="toc-title">Table of Contents</div>
@@ -175,8 +170,6 @@ Terminal/REPL/IDE  zsh/oh-my-zsh https://ohmyz.sh/  plugins=(git history-substri
 </nav>
         </aside>
         <hr />
-
-      
 
       <div class="post-content">
         <p>Making a note to jot down the tools I preferred to use when setting up Python development environment &ndash; <strong>there should be one&ndash; and preferably only one &ndash;obvious way to do things</strong></p>
@@ -260,26 +253,31 @@ eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</spa
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">repos</span><span style="color:#f92672">:</span>
 <span style="color:#f92672">-</span>   <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/pre-commit/pre-commit-hooks
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">v2</span><span style="color:#ae81ff">.3.0</span>
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">v3</span><span style="color:#ae81ff">.4.0</span>
     <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">check</span><span style="color:#f92672">-</span><span style="color:#a6e22e">yaml</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">end</span><span style="color:#f92672">-</span><span style="color:#66d9ef">of</span><span style="color:#f92672">-</span><span style="color:#a6e22e">file</span><span style="color:#f92672">-</span><span style="color:#a6e22e">fixer</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">trailing</span><span style="color:#f92672">-</span><span style="color:#a6e22e">whitespace</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">check</span><span style="color:#f92672">-</span><span style="color:#a6e22e">merge</span><span style="color:#f92672">-</span><span style="color:#a6e22e">conflict</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">debug</span><span style="color:#f92672">-</span><span style="color:#a6e22e">statements</span>
-<span style="color:#f92672">-</span> <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/miki725/importanize/
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;master&#39;</span>
+    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">check</span><span style="color:#f92672">-</span><span style="color:#a6e22e">yaml</span>
+    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">check</span><span style="color:#f92672">-</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">-</span><span style="color:#a6e22e">order</span><span style="color:#f92672">-</span><span style="color:#a6e22e">marker</span>
+    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">end</span><span style="color:#f92672">-</span><span style="color:#66d9ef">of</span><span style="color:#f92672">-</span><span style="color:#a6e22e">file</span><span style="color:#f92672">-</span><span style="color:#a6e22e">fixer</span>
+    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">trailing</span><span style="color:#f92672">-</span><span style="color:#a6e22e">whitespace</span>
+    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">check</span><span style="color:#f92672">-</span><span style="color:#a6e22e">merge</span><span style="color:#f92672">-</span><span style="color:#a6e22e">conflict</span>
+    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">debug</span><span style="color:#f92672">-</span><span style="color:#a6e22e">statements</span>
+    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">-</span><span style="color:#a6e22e">tests</span><span style="color:#f92672">-</span><span style="color:#a6e22e">test</span>
+    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">check</span><span style="color:#f92672">-</span><span style="color:#a6e22e">builtin</span><span style="color:#f92672">-</span><span style="color:#a6e22e">literals</span>
+    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">no</span><span style="color:#f92672">-</span><span style="color:#a6e22e">commit</span><span style="color:#f92672">-</span><span style="color:#a6e22e">to</span><span style="color:#f92672">-</span><span style="color:#a6e22e">branch</span>
+      <span style="color:#a6e22e">args</span><span style="color:#f92672">:</span> [<span style="color:#f92672">--</span><span style="color:#a6e22e">branch</span>, <span style="color:#a6e22e">staging</span>, <span style="color:#f92672">--</span><span style="color:#a6e22e">branch</span>, <span style="color:#a6e22e">master</span>]
+<span style="color:#f92672">-</span>   <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/pycqa/isort
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5.8.0</span>
     <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
-    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">importanize</span>
-      <span style="color:#a6e22e">args</span><span style="color:#f92672">:</span> [<span style="color:#f92672">--</span><span style="color:#a6e22e">verbose</span>]
+      <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">isort</span>
+        <span style="color:#a6e22e">args</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;--profile&#34;</span>, <span style="color:#e6db74">&#34;black&#34;</span>]
 <span style="color:#f92672">-</span>   <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/psf/black
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">19.3</span><span style="color:#a6e22e">b0</span>
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20.8</span><span style="color:#a6e22e">b1</span>
     <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">black</span>
+    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">black</span>
 <span style="color:#f92672">-</span>   <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//gitlab.com/pycqa/flake8
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">master</span>
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rev</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3.9.0</span>
     <span style="color:#a6e22e">hooks</span><span style="color:#f92672">:</span>
-    <span style="color:#f92672">-</span>   <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">flake8</span>
+    <span style="color:#f92672">-</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">flake8</span>
 </code></pre></div><h2 id="other-interesting-tools">Other interesting tools</h2>
 <h3 id="icdiff-and-pytest-icdiff">icdiff and pytest-icdiff</h3>
 <ul>
@@ -315,7 +313,7 @@ git config --global icdiff.options '--highlight --line-numbers'
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        242 Words
+        260 Words
       </p>
 
       <p>
@@ -429,44 +427,36 @@ git config --global icdiff.options '--highlight --line-numbers'
       </div>
 
     
-      <div class="pagination">
+    <div class="pagination">
         <div class="pagination__title">
-          <span class="pagination__title-h">Read other posts</span>
-          <hr />
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
         </div>
 
         <div class="pagination__buttons">
-          
+            
             <span class="button previous">
-              <a href="https://00derek.github.io/posts/hugo_site/">
-                <span class="button__icon">←</span>
-                <span class="button__text">Create blog with GH pages/Hugo</span>
-              </a>
+                <a href="https://00derek.github.io/posts/hugo_site/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">Create blog with GH pages/Hugo</span>
+                </a>
             </span>
-          
+            
 
-          
+            
             <span class="button next">
-              <a href="https://00derek.github.io/posts/prologue/">
-                <span class="button__text">Prologue</span>
-                <span class="button__icon">→</span>
-              </a>
+                <a href="https://00derek.github.io/posts/prologue/">
+                    <span class="button__text">Prologue</span>
+                    <span class="button__icon">→</span>
+                </a>
             </span>
-          
+            
         </div>
-      </div>
-    
-    
-    <div id="comments">
-      <script src="https://utteranc.es/client.js"
-        repo="00derek/00derek.github.io"
-        issue-term="pathname"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-      </script>
     </div>
+
+
     
+
     
 
   </main>
@@ -479,15 +469,13 @@ git config --global icdiff.options '--highlight --line-numbers'
         <div class="footer__content">
             <span>&copy; 2021</span>
             
-            
-                <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
-            <span><a href="https://00derek.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span><span><a href="https://00derek.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
         </div>
     </div>
     <div class="footer__inner">
         <div class="footer__content">
             <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
-            <span>Made with &#10084; by <a href="https://github.com/derek-chang-exa">Derek Chang</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
           </div>
     </div>
 </footer>
@@ -499,8 +487,7 @@ git config --global icdiff.options '--highlight --line-numbers'
 
 
 
-
-<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
 
 
 
