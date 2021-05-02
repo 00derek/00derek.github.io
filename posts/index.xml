@@ -141,7 +141,17 @@ kube1        Ready    &lt;none&gt;                 50m   v1.20.4+k3s1   10.0.0.1
 kube2        Ready    &lt;none&gt;                 41m   v1.20.4+k3s1   10.0.0.12       &lt;none&gt;        Raspbian GNU/Linux 10 (buster)   5.4.83-v7l+      containerd://1.4.3-k3s3
 kubemaster   Ready    control-plane,master   52m   v1.20.4+k3s1   192.168.1.101   &lt;none&gt;        Raspbian GNU/Linux 10 (buster)   5.4.83-v7l+      containerd://1.4.3-k3s3
 pi@kube
-</code></pre><h2 id="to-be-continued">To be continued</h2>
+</code></pre><h2 id="some-random-notes">Some random notes</h2>
+<ul>
+<li><a href="https://github.com/k3s-io/k3s/issues/389">Unable to read /etc/rancher/k3s/k3s.yaml</a></li>
+<li>access it through local kubectl
+<ul>
+<li>copy content of <code>/etc/rancher/k3s/k3s.yaml</code> to local <code>~/.kube/config</code></li>
+<li>replace the ip (127.0.0.1 to the actual IP of the cluster)</li>
+</ul>
+</li>
+</ul>
+<h2 id="to-be-continued">To be continued</h2>
 <ul>
 <li>try k3sup?</li>
 <li>try arkade</li>

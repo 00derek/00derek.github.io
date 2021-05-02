@@ -44,7 +44,7 @@
 <meta itemprop="name" content="K3s on RPi notes">
 <meta itemprop="description" content="Flash the OS to the SD card  Download Raspbian Lite Flash to SD card using Etcher from Balena Enabling SSH for your Headless Raspberry Pi, touch /boot/ssh  Customization  sudo raspi-config  Set the GPU memory split to 16mb Set the hostname, kubemaster, kube 1 -4 for me Change the password for the pi user   Disable swap  sudo dphys-swapfile swapoff &amp;&amp; \ sudo dphys-swapfile uninstall &amp;&amp; \ sudo systemctl stop dphys-swapfile &amp;&amp; \ sudo systemctl disable dphys-swapfile   Enable container features"><meta itemprop="datePublished" content="2021-03-24T22:48:42-07:00" />
 <meta itemprop="dateModified" content="2021-03-24T22:48:42-07:00" />
-<meta itemprop="wordCount" content="517"><meta itemprop="image" content="https://00derek.github.io"/>
+<meta itemprop="wordCount" content="547"><meta itemprop="image" content="https://00derek.github.io"/>
 <meta itemprop="keywords" content="pi," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://00derek.github.io"/>
@@ -153,6 +153,7 @@
     <li><a href="#customization">Customization</a></li>
     <li><a href="#configure-the-network">Configure the Network</a></li>
     <li><a href="#create-the-k3s-cluster">Create the k3s cluster</a></li>
+    <li><a href="#some-random-notes">Some random notes</a></li>
     <li><a href="#to-be-continued">To be continued</a></li>
     <li><a href="#references">References</a></li>
   </ul>
@@ -286,7 +287,17 @@ kube1        Ready    &lt;none&gt;                 50m   v1.20.4+k3s1   10.0.0.1
 kube2        Ready    &lt;none&gt;                 41m   v1.20.4+k3s1   10.0.0.12       &lt;none&gt;        Raspbian GNU/Linux 10 (buster)   5.4.83-v7l+      containerd://1.4.3-k3s3
 kubemaster   Ready    control-plane,master   52m   v1.20.4+k3s1   192.168.1.101   &lt;none&gt;        Raspbian GNU/Linux 10 (buster)   5.4.83-v7l+      containerd://1.4.3-k3s3
 pi@kube
-</code></pre><h2 id="to-be-continued">To be continued</h2>
+</code></pre><h2 id="some-random-notes">Some random notes</h2>
+<ul>
+<li><a href="https://github.com/k3s-io/k3s/issues/389">Unable to read /etc/rancher/k3s/k3s.yaml</a></li>
+<li>access it through local kubectl
+<ul>
+<li>copy content of <code>/etc/rancher/k3s/k3s.yaml</code> to local <code>~/.kube/config</code></li>
+<li>replace the ip (127.0.0.1 to the actual IP of the cluster)</li>
+</ul>
+</li>
+</ul>
+<h2 id="to-be-continued">To be continued</h2>
 <ul>
 <li>try k3sup?</li>
 <li>try arkade</li>
@@ -328,7 +339,7 @@ pi@kube
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        517 Words
+        547 Words
       </p>
 
       <p>
